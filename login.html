@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Patient Login</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      width: 380px;
+      padding: 30px;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h2 {
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #0077b6;
+      box-shadow: 0 0 5px rgba(0,119,182,0.5);
+    }
+
+    .login-btn {
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #0096c7;
+    }
+
+    .bottom-text {
+      margin-top: 15px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .bottom-text a {
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .bottom-text a:hover {
+      text-decoration: underline;
+    }
+
+    .hospital-logo {
+      width: 70px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" class="hospital-logo" alt="Hospital Logo">
+    <h2>Patient Login</h2>
+    <form action="#">
+      <div class="input-group">
+        <label for="patient-id">Patient ID</label>
+        <input type="text" id="patient-id" name="patient-id" placeholder="Enter your ID" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    <div class="bottom-text">
+      <p>Forgot password? <a href="#">Reset here</a></p>
+      <p>New patient? <a href="#">Register now</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
